@@ -32,7 +32,7 @@ if ingredients_list:
         st.write(f'The search value for {fruit} is {search_on}.')
 
         st.subheader(f'{fruit} Nutrition Information')
-        fruityvice_response = requests.get(f"https://fruityvice.com/api/fruit/{fruit}")
+        fruityvice_response = requests.get(f"https://fruityvice.com/api/fruit/{search_on}")
         # st.text(fruityvice_response.json())
         fv_df = st.dataframe(
             data = fruityvice_response.json(),
